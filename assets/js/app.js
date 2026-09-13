@@ -21,6 +21,12 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const byId = id => PRODUCTOS.find(p => p.id === id);
 const params = () => new URLSearchParams(location.search);
 
+function abrirWhatsApp(mensaje){
+  const base = (TIENDA.whatsapp || "").trim();
+  if(!base){ toast("Falta configurar el número de WhatsApp en data.js"); return; }
+  const sep = base.includes("?") ? "&" : "?";
+  window.open(base + sep + "text=" + encodeURIComponent(mensaje), "_blank", "noopener");
+}
 function toast(msg){
   const t = $("#toast"); if(!t) return;
   t.textContent = msg; t.classList.add("is-on");

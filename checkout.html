@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Finalizar compra | miperfumeria</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%23101C3A%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Georgia,serif%27 font-size=%2736%27 font-style=%27italic%27 fill=%27%23ffffff%27 text-anchor=%27middle%27%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 </div>
 
 <div class="plp-head"><div class="wrap"><h1>Finalizar compra</h1>
-  <p>Este es un maquetado de demostración: no se procesa ningún pago ni se guarda información.</p></div></div>
+  <p>Al confirmar, tu pedido se envía por WhatsApp para coordinar el pago y el envío.</p></div></div>
 
 <div class="wrap">
   <div class="checkout">
@@ -25,22 +26,22 @@
       <div class="co-box">
         <h3><i>1</i> Datos de contacto</h3>
         <div class="form-grid">
-          <label class="field"><span>Nombre</span><input required placeholder="Nombre"></label>
-          <label class="field"><span>Apellidos</span><input required placeholder="Apellidos"></label>
-          <label class="field"><span>WhatsApp</span><input required placeholder="10 dígitos"></label>
-          <label class="field"><span>Correo</span><input type="email" required placeholder="tucorreo@ejemplo.com"></label>
+          <label class="field"><span>Nombre</span><input id="f-nombre" required placeholder="Nombre"></label>
+          <label class="field"><span>Apellidos</span><input id="f-apellidos" required placeholder="Apellidos"></label>
+          <label class="field"><span>WhatsApp</span><input id="f-whatsapp" required placeholder="10 dígitos"></label>
+          <label class="field"><span>Correo</span><input id="f-correo" type="email" required placeholder="tucorreo@ejemplo.com"></label>
         </div>
       </div>
 
       <div class="co-box">
         <h3><i>2</i> Dirección de envío</h3>
         <div class="form-grid">
-          <label class="field full"><span>Calle y número</span><input required placeholder="Calle, número exterior e interior"></label>
-          <label class="field"><span>Colonia</span><input required placeholder="Colonia"></label>
-          <label class="field"><span>Código postal</span><input required placeholder="00000"></label>
-          <label class="field"><span>Ciudad</span><input required placeholder="Ciudad"></label>
+          <label class="field full"><span>Calle y número</span><input id="f-calle" required placeholder="Calle, número exterior e interior"></label>
+          <label class="field"><span>Colonia</span><input id="f-colonia" required placeholder="Colonia"></label>
+          <label class="field"><span>Código postal</span><input id="f-cp" required placeholder="00000"></label>
+          <label class="field"><span>Ciudad</span><input id="f-ciudad" required placeholder="Ciudad"></label>
           <label class="field"><span>Estado</span>
-            <select required>
+            <select id="f-estado" required>
               <option value="">Selecciona</option>
               <option>Aguascalientes</option><option>Baja California</option><option>Ciudad de México</option>
               <option>Estado de México</option><option>Guanajuato</option><option>Jalisco</option>
@@ -48,18 +49,18 @@
               <option>Quintana Roo</option><option>Veracruz</option><option>Yucatán</option>
               <option>Otro</option>
             </select></label>
-          <label class="field full"><span>Referencias para el repartidor</span><textarea rows="2" placeholder="Entre qué calles, color de fachada, etc."></textarea></label>
+          <label class="field full"><span>Referencias para el repartidor</span><textarea id="f-referencias" rows="2" placeholder="Entre qué calles, color de fachada, etc."></textarea></label>
         </div>
         <p style="font-size:12px;color:var(--muted);margin:0">Enviamos con Skydrop. La paquetería se asigna según tu código postal para que llegue lo más rápido posible.</p>
       </div>
 
       <div class="co-box">
         <h3><i>3</i> Forma de pago</h3>
-        <label class="pay-opt is-on"><input type="radio" name="pago" checked>
+        <label class="pay-opt is-on"><input type="radio" name="pago" data-label="Transferencia bancaria (SPEI)" checked>
           <div><b>Transferencia bancaria (SPEI)</b><p>Te compartimos la CLABE al confirmar. Apartamos tu pedido 12 horas.</p></div></label>
-        <label class="pay-opt"><input type="radio" name="pago">
+        <label class="pay-opt"><input type="radio" name="pago" data-label="Depósito en ventanilla o tienda">
           <div><b>Depósito en ventanilla o tienda</b><p>Depositas y nos envías la foto del comprobante por WhatsApp.</p></div></label>
-        <label class="pay-opt"><input type="radio" name="pago">
+        <label class="pay-opt"><input type="radio" name="pago" data-label="Efectivo en entrega local">
           <div><b>Efectivo en entrega local</b><p>Disponible en zona metropolitana con entrega en punto acordado.</p></div></label>
         <p style="font-size:12px;color:var(--muted);margin:14px 0 0">Por el momento no manejamos pagos a meses sin intereses.</p>
       </div>
@@ -67,7 +68,7 @@
       <div class="co-box">
         <h3><i>4</i> Facturación</h3>
         <label style="display:flex;gap:10px;align-items:center;font-size:13px">
-          <input type="checkbox"> Necesito factura para este pedido
+          <input id="f-factura" type="checkbox"> Necesito factura para este pedido
         </label>
       </div>
 
@@ -87,7 +88,47 @@
 <script src="assets/js/app.js"></script>
 <script>
 function confirmar(){
-  toast("Pedido confirmado (demostración). Te escribiríamos por WhatsApp con los datos de pago.");
+  if(!getCart().length){ toast("Tu bolsa está vacía"); return; }
+  const g = id => document.getElementById(id)?.value.trim() || "";
+  const datos = {
+    nombre: g("f-nombre"), apellidos: g("f-apellidos"), whatsapp: g("f-whatsapp"), correo: g("f-correo"),
+    calle: g("f-calle"), colonia: g("f-colonia"), cp: g("f-cp"), ciudad: g("f-ciudad"), estado: g("f-estado"),
+    referencias: g("f-referencias"),
+    pago: document.querySelector('input[name="pago"]:checked')?.dataset.label || "",
+    factura: document.getElementById("f-factura")?.checked
+  };
+
+  const c = getCart(), piezas = cartCount(), sub = cartTotal();
+  const envio = piezas >= TIENDA.envioGratisPiezas ? 0 : 199;
+  const lineas = c.map(i=>{
+    const p = byId(i.id);
+    return `• ${p.marca} ${p.nombre} (${p.ml}) x${i.q} — ${MONEDA(p.precio*i.q)}`;
+  }).join("\n");
+
+  const mensaje =
+`Hola, quiero confirmar este pedido de ${TIENDA.nombre}:
+
+${lineas}
+
+Subtotal: ${MONEDA(sub)}
+Envío: ${envio ? MONEDA(envio) : "Gratis"}
+Total: ${MONEDA(sub+envio)}
+
+Datos de contacto:
+${datos.nombre} ${datos.apellidos}
+WhatsApp: ${datos.whatsapp}
+Correo: ${datos.correo}
+
+Dirección de envío:
+${datos.calle}, ${datos.colonia}, CP ${datos.cp}
+${datos.ciudad}, ${datos.estado}
+Referencias: ${datos.referencias || "—"}
+
+Forma de pago: ${datos.pago}
+Factura: ${datos.factura ? "Sí" : "No"}`;
+
+  abrirWhatsApp(mensaje);
+  toast("Te abrimos WhatsApp con tu pedido listo para enviar.");
   window.scrollTo({top:0, behavior:"smooth"});
 }
 function onCartChange(){ pintarSum(); }

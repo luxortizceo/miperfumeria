@@ -1,2 +1,4 @@
 _backup_nextjs/
 .DS_Store
+.vercel
+.env*
