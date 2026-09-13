@@ -140,14 +140,14 @@
   <div class="wrap-narrow">
     <div class="sec-head"><h2 class="sec-title">Solicita la lista de mayoreo</h2>
       <p class="sec-sub">Te la enviamos el mismo día</p></div>
-    <form onsubmit="event.preventDefault();toast('Solicitud enviada (demostración)');this.reset()">
+    <form onsubmit="event.preventDefault();enviarSolicitudMayoreo(this)">
       <div class="form-grid">
-        <label class="field"><span>Nombre</span><input required placeholder="Tu nombre"></label>
-        <label class="field"><span>WhatsApp</span><input required placeholder="10 dígitos"></label>
-        <label class="field"><span>Ciudad</span><input placeholder="Ciudad y estado"></label>
+        <label class="field"><span>Nombre</span><input id="my-nombre" required placeholder="Tu nombre"></label>
+        <label class="field"><span>WhatsApp</span><input id="my-whatsapp" required placeholder="10 dígitos"></label>
+        <label class="field"><span>Ciudad</span><input id="my-ciudad" placeholder="Ciudad y estado"></label>
         <label class="field"><span>Presupuesto aproximado</span>
-          <select><option>$4,000 – $8,000</option><option>$8,000 – $15,000</option><option>Más de $15,000</option><option>Aún no lo defino</option></select></label>
-        <label class="field full"><span>¿Qué tipo de perfume vendes?</span><textarea rows="3" placeholder="Árabes, diseñador, para hombre, para mujer…"></textarea></label>
+          <select id="my-presupuesto"><option>$4,000 – $8,000</option><option>$8,000 – $15,000</option><option>Más de $15,000</option><option>Aún no lo defino</option></select></label>
+        <label class="field full"><span>¿Qué tipo de perfume vendes?</span><textarea id="my-tipo" rows="3" placeholder="Árabes, diseñador, para hombre, para mujer…"></textarea></label>
       </div>
       <button class="btn btn-block" type="submit">Enviar solicitud</button>
     </form>
@@ -160,6 +160,13 @@
 <script src="assets/js/layout.js"></script>
 <script src="assets/js/app.js"></script>
 <script>
+function enviarSolicitudMayoreo(form){
+  const g = id => document.getElementById(id)?.value.trim() || "";
+  const texto = `Hola, quiero la lista de mayoreo de ${TIENDA.nombre}.\n\nNombre: ${g("my-nombre")}\nWhatsApp: ${g("my-whatsapp")}\nCiudad: ${g("my-ciudad") || "—"}\nPresupuesto aproximado: ${g("my-presupuesto")}\nTipo de perfume que vende: ${g("my-tipo") || "—"}`;
+  abrirWhatsApp(texto);
+  toast("Te abrimos WhatsApp con tu solicitud lista para enviar.");
+  form.reset();
+}
 function calcular(){
   const pz = +document.querySelector("#pzs").value;
   const prom = +document.querySelector("#prom").value;
