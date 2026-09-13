@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>miperfumeria | Perfumes originales con envío a todo México</title>
+<meta name="description" content="Perfumes 100% originales de diseñador y árabes. Envío gratis desde 3 piezas, precio de mayoreo desde $4,000 y garantía de autenticidad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<!-- ============ CARRUSEL PRINCIPAL ============ -->
+<div class="hero" id="hero">
+  <div class="hero-slide is-on">
+    <div class="hero-bg" data-bg="navy"></div>
+    <div class="hero-inner"><div class="hero-copy">
+      <div class="eyebrow">Los más vendidos</div>
+      <h2>Hawas Ice</h2>
+      <p>El favorito de la tienda. Salida helada y cítrica, fondo ambarado y hasta 10 horas de duración.</p>
+      <a class="btn btn-light" href="producto.html?id=hawas-ice">Comprar ahora</a>
+    </div></div>
+  </div>
+  <div class="hero-slide">
+    <div class="hero-bg" data-bg="azul"></div>
+    <div class="hero-inner"><div class="hero-copy">
+      <div class="eyebrow">Beneficio permanente</div>
+      <h2>Envío gratis desde 3 piezas</h2>
+      <p>Arma tu pedido con tres fragancias o más y nosotros pagamos la guía a cualquier parte de México.</p>
+      <a class="btn btn-light" href="catalogo.html">Ver catálogo completo</a>
+    </div></div>
+  </div>
+  <div class="hero-slide">
+    <div class="hero-bg" data-bg="noche"></div>
+    <div class="hero-inner"><div class="hero-copy">
+      <div class="eyebrow">Revendedores</div>
+      <h2>Precio de mayoreo</h2>
+      <p>Desde $4,000 en un solo pedido accedes a precio especial por pieza. Ideal si vendes por catálogo o en tu local.</p>
+      <a class="btn btn-light" href="mayoreo.html">Conocer condiciones</a>
+    </div></div>
+  </div>
+  <button class="hero-arrow prev" data-hero="-1" aria-label="Anterior">‹</button>
+  <button class="hero-arrow next" data-hero="1" aria-label="Siguiente">›</button>
+  <div class="hero-dots" id="heroDots"></div>
+</div>
+
+<!-- ============ BENEFICIOS ============ -->
+<div class="benefits">
+  <div class="wrap">
+    <div class="benefit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 7h11v9H2z"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+      <div><b>Envío gratis</b><span>Comprando 3 piezas o más</span></div></div>
+    <div class="benefit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 4.4-3 7.9-7 9-4-1.1-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div><b>100% originales</b><span>Garantía de autenticidad</span></div></div>
+    <div class="benefit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="20" height="12"/><circle cx="12" cy="12" r="2.6"/></svg>
+      <div><b>Precio mayoreo</b><span>En pedidos desde $4,000</span></div></div>
+    <div class="benefit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.1A8 8 0 1 1 21 12z"/></svg>
+      <div><b>Asesoría real</b><span>Te ayudamos a elegir por WhatsApp</span></div></div>
+  </div>
+</div>
+
+<!-- ============ MÁS VENDIDOS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Los más vendidos</h2>
+      <p class="sec-sub">Lo que sale todos los días de la tienda</p>
+    </div>
+    <div class="rail-wrap">
+      <button class="rail-btn prev" aria-label="Anterior">‹</button>
+      <div class="rail" id="railBest"></div>
+      <button class="rail-btn next" aria-label="Siguiente">›</button>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a class="link-more" href="catalogo.html?f=best">Ver todos los más vendidos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOSAICO DE CATEGORÍAS ============ -->
+<section class="sec-bone tight">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Encuentra el tuyo</h2></div>
+    <div class="tiles">
+      <a class="tile" href="catalogo.html?f=hombre"><div data-tile="dark" style="aspect-ratio:4/5;max-height:420px"></div>
+        <div class="tile-cap"><span>Para él</span><h3>Hombre</h3></div></a>
+      <a class="tile" href="catalogo.html?f=mujer"><div data-tile="light" style="aspect-ratio:4/5;max-height:420px"></div>
+        <div class="tile-cap"><span>Para ella</span><h3>Mujer</h3></div></a>
+      <a class="tile" href="catalogo.html?f=arabe"><div data-tile="black" style="aspect-ratio:4/5;max-height:420px"></div>
+        <div class="tile-cap"><span>Alto rendimiento</span><h3>Árabes</h3></div></a>
+      <a class="tile" href="catalogo.html?f=disenador"><div data-tile="mid" style="aspect-ratio:4/5;max-height:420px"></div>
+        <div class="tile-cap"><span>Casas de lujo</span><h3>Diseñador</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BANNER EDITORIAL ============ -->
+<div class="editorial">
+  <div class="hero-bg" data-bg="noche"></div>
+  <div class="wrap"><div class="editorial-copy">
+    <div class="eyebrow">Colección</div>
+    <h2>Perfumes árabes</h2>
+    <p>Rasasi, Armaf y Lattafa: la mejor relación entre duración, proyección y precio. Fragancias que rinden todo el día por una fracción de lo que cuesta un diseñador.</p>
+    <a class="btn btn-light" href="catalogo.html?f=arabe">Descubrir ›</a>
+  </div></div>
+</div>
+
+<!-- ============ NOVEDADES ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title">Recién llegados</h2>
+      <p class="sec-sub">Nuevo inventario cada semana</p>
+    </div>
+    <div class="rail-wrap">
+      <button class="rail-btn prev" aria-label="Anterior">‹</button>
+      <div class="rail" id="railNuevo"></div>
+      <button class="rail-btn next" aria-label="Siguiente">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARCAS ============ -->
+<section class="sec-bone">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Firmas que dejan huella</h2>
+      <p class="sec-sub">Trabajamos únicamente con producto original</p></div>
+    <div class="brands" id="brandGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FORMAS DE PAGO ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Paga como te acomode</h2>
+      <p class="sec-sub">Sin complicaciones y sin cargos extra</p></div>
+    <div class="pay-strip">
+      <div class="pay-card"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="20" height="12"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+        <h4>Efectivo</h4><p>Pago en efectivo al momento de la entrega en zona local o en punto acordado.</p></div>
+      <div class="pay-card"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 10l9-5 9 5"/><path d="M5 10v8M10 10v8M14 10v8M19 10v8"/><path d="M3 21h18"/></svg></div>
+        <h4>Transferencia</h4><p>SPEI desde cualquier banco. Confirmamos tu pedido en cuanto entra el pago.</p></div>
+      <div class="pay-card"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="5" width="20" height="14"/><path d="M2 10h20"/></svg></div>
+        <h4>Depósito</h4><p>En ventanilla o en tiendas de conveniencia. Solo envías tu comprobante.</p></div>
+      <div class="pay-card"><div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+        <h4>Envíos Skydrop</h4><p>Guías con las principales paqueterías del país y número de rastreo siempre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAYOREO ============ -->
+<div class="editorial">
+  <div class="hero-bg" data-bg="azul"></div>
+  <div class="wrap"><div class="editorial-copy">
+    <div class="eyebrow">Para revendedores</div>
+    <h2>Precio de mayoreo desde $4,000</h2>
+    <p>Si vendes por catálogo, tienes un local o apenas empiezas, armamos tu pedido con precio especial por pieza y te acompañamos con la lista actualizada de disponibilidad.</p>
+    <a class="btn btn-light" href="mayoreo.html">Ver condiciones ›</a>
+  </div></div>
+</div>
+
+<!-- ============ OFERTAS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Ofertas de la semana</h2>
+      <p class="sec-sub">Precios especiales mientras dure el inventario</p></div>
+    <div class="grid-products" id="gridOferta"></div>
+    <div style="text-align:center;margin-top:34px"><a class="link-more" href="catalogo.html?f=oferta">Ver todas las ofertas</a></div>
+  </div>
+</section>
+
+<!-- ============ ENLACES SEO ============ -->
+<section class="sec-bone tight">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Más categorías</h2></div>
+    <div class="seo-cloud">
+      <a href="catalogo.html?fam=Fresco">Perfumes frescos</a>
+      <a href="catalogo.html?fam=Amaderado">Amaderados</a>
+      <a href="catalogo.html?fam=Oriental">Orientales</a>
+      <a href="catalogo.html?fam=Dulce">Dulces y gourmand</a>
+      <a href="catalogo.html?fam=Floral">Florales</a>
+      <a href="catalogo.html?fam=Cítrico">Cítricos</a>
+      <a href="catalogo.html?m=Rasasi">Rasasi</a>
+      <a href="catalogo.html?m=Armaf">Armaf</a>
+      <a href="catalogo.html?m=Lattafa">Lattafa</a>
+      <a href="catalogo.html?m=Dior">Dior</a>
+      <a href="catalogo.html?m=Versace">Versace</a>
+      <a href="catalogo.html?m=Carolina Herrera">Carolina Herrera</a>
+      <a href="catalogo.html?max=1500">Menos de $1,500</a>
+      <a href="catalogo.html?f=unisex">Unisex</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIO ============ -->
+<section class="tight">
+  <div class="wrap">
+    <div class="service-strip">
+      <div class="service-item"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 7h11v9H2z"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></div>
+        <b>Envíos a todo México</b><p>Trabajamos con Skydrop: Estafeta, FedEx, DHL, Redpack y Paquetexpress.</p></div>
+      <div class="service-item"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div>
+        <b>Rastrea tu pedido</b><p>Te enviamos el número de guía el mismo día en que sale tu paquete.</p></div>
+      <div class="service-item"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l7 3v6c0 4.4-3 7.9-7 9-4-1.1-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <b>Autenticidad garantizada</b><p>Si tu perfume no es original, te devolvemos el 100% de tu dinero.</p></div>
+      <div class="service-item"><div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.1A8 8 0 1 1 21 12z"/></svg></div>
+        <b>Te asesoramos</b><p>Dinos qué buscas y te recomendamos según ocasión, clima y presupuesto.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h3>Entérate antes que nadie</h3>
+        <ul>
+          <li>Nuevas llegadas y reposiciones de los agotados.</li>
+          <li>Ofertas exclusivas para la lista de correo.</li>
+          <li>Guías para elegir tu fragancia según ocasión y clima.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="nl-chips">
+          <label><input type="checkbox" checked> Hombre</label>
+          <label><input type="checkbox" checked> Mujer</label>
+          <label><input type="checkbox"> Mayoreo</label>
+        </div>
+        <form class="nl-form" onsubmit="event.preventDefault();toast('Gracias por suscribirte');this.reset()">
+          <input type="email" required placeholder="Tu correo electrónico" aria-label="Correo electrónico">
+          <button type="submit">Suscribirme</button>
+        </form>
+        <p class="nl-note">Al suscribirte aceptas recibir comunicaciones de miperfumeria. Puedes darte de baja cuando quieras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+function pageInit(){
+  renderCards(PRODUCTOS.filter(p=>p.best), "#railBest");
+  renderCards(PRODUCTOS.filter(p=>p.nuevo).concat(PRODUCTOS.slice(6,12)).slice(0,8), "#railNuevo");
+  renderCards(PRODUCTOS.filter(p=>p.oferta || (p.lista && (1-p.precio/p.lista) >= .2)).slice(0,4), "#gridOferta");
+
+  // marcas destacadas
+  const marcas = [["Rasasi","Hasta -24%"],["Armaf","Hasta -23%"],["Lattafa","Hasta -25%"],
+                  ["Azzaro","Hasta -21%"],["Dior","Originales"],["Carolina Herrera","Hasta -15%"]];
+  document.querySelector("#brandGrid").innerHTML = marcas.map(m=>
+    `<a class="brand-card" href="catalogo.html?m=${encodeURIComponent(m[0])}"><b>${m[0]}</b><span>${m[1]}</span></a>`).join("");
+
+  // carrusel principal
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelector("#heroDots");
+  let i = 0;
+  dots.innerHTML = [...slides].map((_,k)=>`<button data-go="${k}" class="${k?"":"is-on"}" aria-label="Ir a la imagen ${k+1}"></button>`).join("");
+  const go = n => {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s,k)=>s.classList.toggle("is-on", k===i));
+    dots.querySelectorAll("button").forEach((b,k)=>b.classList.toggle("is-on", k===i));
+  };
+  let auto = setInterval(()=>go(i+1), 6000);
+  document.querySelectorAll("[data-hero]").forEach(b=>b.addEventListener("click",()=>{clearInterval(auto);go(i + +b.dataset.hero)}));
+  dots.addEventListener("click", e=>{ const b = e.target.closest("[data-go]"); if(b){clearInterval(auto); go(+b.dataset.go);} });
+}
+</script>
+</body>
+</html>

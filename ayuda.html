@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayuda: envíos, pagos y preguntas frecuentes | miperfumeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="page-hero">
+  <div class="hero-bg" data-bg="azul"></div>
+  <div class="wrap">
+    <h1>Centro de ayuda</h1>
+    <p>Envíos, formas de pago, rastreo y todo lo que suelen preguntarnos antes de comprar.</p>
+  </div>
+</div>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cards-3">
+      <a class="info-card" href="#envios"><h3>Envíos</h3><p>Cobertura, tiempos y costo. Cuándo el envío es gratis.</p></a>
+      <a class="info-card" href="#pagos"><h3>Formas de pago</h3><p>Efectivo, transferencia y depósito. Cómo confirmar.</p></a>
+      <a class="info-card" href="#rastreo"><h3>Rastrea tu pedido</h3><p>Dónde consultar tu guía y qué hacer si se atrasa.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="envios">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <h2>Envíos</h2>
+      <p>Enviamos a todo México con <strong>Skydrop</strong>, que integra Estafeta, FedEx, DHL, Redpack y Paquetexpress. Al generar tu guía se elige la paquetería que mejor llega a tu código postal.</p>
+      <table>
+        <tr><th>Zona</th><th>Tiempo estimado</th><th>Costo</th></tr>
+        <tr><td>Zona metropolitana</td><td>1 a 2 días hábiles</td><td>$149</td></tr>
+        <tr><td>Resto del país</td><td>2 a 5 días hábiles</td><td>$199</td></tr>
+        <tr><td>3 piezas o más</td><td>Igual que arriba</td><td><strong>Gratis</strong></td></tr>
+      </table>
+      <p>Los pedidos pagados antes de las 4:00 p.m. salen el mismo día hábil. Los del fin de semana salen el lunes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec-bone tight" id="pagos">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <h2>Formas de pago</h2>
+      <ul>
+        <li><strong>Transferencia (SPEI).</strong> Te damos la CLABE al confirmar. Apartamos tu pedido 12 horas mientras se refleja.</li>
+        <li><strong>Depósito.</strong> En ventanilla bancaria o tienda de conveniencia. Solo nos mandas la foto del comprobante.</li>
+        <li><strong>Efectivo.</strong> Disponible en entregas locales dentro de la zona metropolitana.</li>
+      </ul>
+      <p>Por ahora <strong>no manejamos pagos a meses sin intereses</strong>. Preferimos mantener el precio lo más bajo posible en lugar de absorber la comisión de la terminal.</p>
+      <h3>Facturación</h3>
+      <p>Si necesitas factura, avísanos antes de pagar y te la emitimos con tus datos fiscales.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="rastreo">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <h2>Rastrea tu pedido</h2>
+      <p>En cuanto tu paquete sale te enviamos por WhatsApp el número de guía y el enlace de rastreo de la paquetería asignada. Si pasan más de 48 horas sin movimiento, escríbenos y nosotros levantamos la aclaración.</p>
+    </div>
+    <form style="max-width:520px;margin:0 auto" onsubmit="event.preventDefault();toast('En el sitio final esto consulta tu guía real')">
+      <label class="field"><span>Número de pedido o guía</span><input placeholder="Ej. MP-10428"></label>
+      <button class="btn btn-block" type="submit">Consultar</button>
+    </form>
+  </div>
+</section>
+
+<section class="sec-bone" id="faq">
+  <div class="wrap-narrow">
+    <div class="sec-head"><h2 class="sec-title">Preguntas frecuentes</h2></div>
+    <div class="acc">
+      <div class="acc-item is-on"><button class="acc-btn">¿Los perfumes son originales? <span class="sign">+</span></button>
+        <div class="acc-panel">Sí. Vendemos exclusivamente perfume original sellado de fábrica. No manejamos imitaciones, inspirados ni decants. Si recibes algo que no cumpla, lo recogemos y te devolvemos el 100%.</div></div>
+      <div class="acc-item"><button class="acc-btn">¿Cuándo es gratis el envío? <span class="sign">+</span></button>
+        <div class="acc-panel">Comprando 3 piezas o más en el mismo pedido, sin importar el estado al que se envíe.</div></div>
+      <div class="acc-item"><button class="acc-btn">¿Cómo obtengo precio de mayoreo? <span class="sign">+</span></button>
+        <div class="acc-panel">Llegando a $4,000 en un mismo pedido. Puedes mezclar los modelos que quieras, no hay que comprar caja cerrada. Revisa la <a href="mayoreo.html">página de mayoreo</a>.</div></div>
+      <div class="acc-item"><button class="acc-btn">¿Manejan meses sin intereses? <span class="sign">+</span></button>
+        <div class="acc-panel">No. Trabajamos con efectivo, transferencia y depósito para mantener el precio más bajo.</div></div>
+      <div class="acc-item"><button class="acc-btn">¿Puedo cambiar un perfume si no me gustó? <span class="sign">+</span></button>
+        <div class="acc-panel">Por higiene no aceptamos devolución de producto abierto. Si llegó dañado o equivocado, lo cambiamos sin costo avisando dentro de las primeras 48 horas.</div></div>
+      <div class="acc-item"><button class="acc-btn">¿Tienen tienda física? <span class="sign">+</span></button>
+        <div class="acc-panel">La venta es en línea y por Instagram. En la zona metropolitana hacemos entregas en punto acordado.</div></div>
+      <div class="acc-item"><button class="acc-btn">¿Cómo sé cuál perfume me queda? <span class="sign">+</span></button>
+        <div class="acc-panel">Escríbenos y te preguntamos tres cosas: para qué ocasión, qué aromas te gustan y tu presupuesto. Con eso te damos dos o tres opciones concretas. También puedes leer la <a href="autenticidad.html#guia">guía para elegir</a>.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="devoluciones">
+  <div class="wrap-narrow">
+    <div class="prose">
+      <h2>Cambios y devoluciones</h2>
+      <p>Tienes 48 horas desde que recibes tu pedido para reportar cualquier problema: producto dañado, equivocado o con señales de no ser original. Nosotros cubrimos la guía de retorno y hacemos el cambio o el reembolso.</p>
+      <p>No aceptamos devoluciones por cambio de opinión una vez abierto el sello, por razones de higiene.</p>
+
+      <h2 id="terminos">Términos y condiciones</h2>
+      <p>Los precios están en pesos mexicanos e incluyen impuestos. La disponibilidad se actualiza durante el día; si un artículo se agota después de tu pago, te ofrecemos un modelo equivalente o el reembolso inmediato. Las promociones no son acumulables salvo que se indique.</p>
+
+      <h2 id="privacidad">Aviso de privacidad</h2>
+      <p>Usamos tus datos únicamente para procesar y enviar tu pedido, y para contactarte sobre el mismo. No los compartimos con terceros distintos a la paquetería que entrega tu paquete. Puedes pedir la eliminación de tus datos escribiéndonos.</p>
+      <p style="color:var(--muted);font-size:12px">Texto de referencia para el maquetado. La versión legal definitiva la revisa el negocio antes de publicar.</p>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script>function pageInit(){}</script>
+</body>
+</html>

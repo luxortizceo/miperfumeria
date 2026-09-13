@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tu bolsa | miperfumeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="wrap">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / <span>Tu bolsa</span></div>
+</div>
+
+<div class="plp-head"><div class="wrap"><h1>Tu bolsa</h1></div></div>
+
+<div class="wrap">
+  <div class="checkout">
+    <div id="items"></div>
+    <aside>
+      <div class="summary" id="sum"></div>
+    </aside>
+  </div>
+</div>
+
+<section class="sec-bone tight">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Completa tu pedido</h2>
+      <p class="sec-sub">Llegando a 3 piezas tu envío es gratis</p></div>
+    <div class="rail-wrap">
+      <button class="rail-btn prev">‹</button>
+      <div class="rail" id="railSug"></div>
+      <button class="rail-btn next">›</button>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+function onCartChange(){ pintarPagina(); }
+function pintarPagina(){
+  const c = getCart(), cont = document.querySelector("#items"), sum = document.querySelector("#sum");
+  if(!cont) return;
+  if(!c.length){
+    cont.innerHTML = `<div class="empty-state" style="border:1px solid var(--line)">
+      <p>Todavía no agregas nada a tu bolsa.</p>
+      <a class="btn btn-ghost btn-sm" href="catalogo.html">Ver catálogo</a></div>`;
+    sum.innerHTML = "";
+    return;
+  }
+  cont.innerHTML = c.map(i=>{
+    const p = byId(i.id);
+    return `<div class="mini-item" style="grid-template-columns:110px 1fr auto">
+      <div class="thumb">${cardArt(p)}</div>
+      <div>
+        <h5>${p.marca}</h5>
+        <p style="font-size:14px;margin-bottom:4px"><a href="producto.html?id=${p.id}">${p.nombre}</a></p>
+        <p style="color:var(--muted-2);font-size:12px">${p.ml} · ${p.familia}</p>
+        <div class="qty"><button onclick="changeQty('${p.id}',-1)">−</button><span>${i.q}</span><button onclick="changeQty('${p.id}',1)">+</button></div>
+        <br><a class="rm" onclick="removeItem('${p.id}')">Eliminar</a>
+      </div>
+      <div style="text-align:right">
+        <strong style="font-family:var(--f-brand);font-size:15px">${MONEDA(p.precio*i.q)}</strong>
+        ${p.lista?`<div class="price-was" style="font-size:12px">${MONEDA(p.lista*i.q)}</div>`:""}
+      </div>
+    </div>`;
+  }).join("");
+
+  const piezas = cartCount(), sub = cartTotal();
+  const envio = piezas >= TIENDA.envioGratisPiezas ? 0 : 199;
+  const mayoreo = sub >= TIENDA.mayoreoMonto;
+  sum.innerHTML = `
+    <h3>Resumen</h3>
+    <div class="sum-row"><span>Subtotal (${piezas} pza)</span><span>${MONEDA(sub)}</span></div>
+    <div class="sum-row"><span>Envío con Skydrop</span><span>${envio ? MONEDA(envio) : "Gratis"}</span></div>
+    ${mayoreo ? `<div class="sum-row" style="color:var(--ok)"><span>Precio mayoreo</span><span>Aplicado ✓</span></div>`
+              : `<div class="sum-row" style="color:var(--muted)"><span>Faltan ${MONEDA(TIENDA.mayoreoMonto-sub)} para mayoreo</span><span></span></div>`}
+    <div class="sum-row total"><span>Total</span><span>${MONEDA(sub+envio)}</span></div>
+    <a class="btn btn-block" style="margin-top:16px" href="checkout.html">Continuar</a>
+    <a class="btn btn-block btn-ghost" style="margin-top:8px" href="catalogo.html">Seguir comprando</a>
+    <p style="font-size:11.5px;color:var(--muted);margin-top:16px;line-height:1.7">
+      Pagos en efectivo, transferencia o depósito. Confirmamos tu pedido en cuanto recibimos el comprobante.</p>`;
+}
+function pageInit(){
+  pintarPagina();
+  const enCarrito = getCart().map(i=>i.id);
+  renderCards(PRODUCTOS.filter(p=>!enCarrito.includes(p.id)).slice(0,8), "#railSug");
+}
+</script>
+</body>
+</html>

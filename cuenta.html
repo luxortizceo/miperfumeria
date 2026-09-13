@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi cuenta | miperfumeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="plp-head"><div class="wrap"><h1>Mi cuenta</h1>
+  <p>Crea tu cuenta para comprar más rápido, guardar direcciones y consultar tus pedidos anteriores.</p></div></div>
+
+<section>
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto">
+      <div>
+        <h3 style="font-family:var(--f-brand);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px">Iniciar sesión</h3>
+        <form onsubmit="event.preventDefault();toast('Demostración: sin cuentas reales todavía')">
+          <label class="field"><span>Correo</span><input type="email" required placeholder="tucorreo@ejemplo.com"></label>
+          <label class="field"><span>Contraseña</span><input type="password" required placeholder="••••••••"></label>
+          <button class="btn btn-block" type="submit">Entrar</button>
+        </form>
+      </div>
+      <div style="border-left:1px solid var(--line);padding-left:48px">
+        <h3 style="font-family:var(--f-brand);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px">¿Aún no tienes cuenta?</h3>
+        <ul class="prose"><li>Compra en menos pasos</li><li>Guarda tus direcciones de envío</li><li>Consulta tus pedidos y guías</li><li>Recibe avisos de reposición</li></ul>
+        <a class="btn btn-ghost btn-block" style="margin-top:20px" href="#">Crear cuenta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script>function pageInit(){}</script>
+</body>
+</html>

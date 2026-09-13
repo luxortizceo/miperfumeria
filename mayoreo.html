@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayoreo | miperfumeria</title>
+<meta name="description" content="Precio de mayoreo en perfumes originales desde $4,000 por pedido. Para revendedores, tiendas y catálogo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<div class="page-hero">
+  <div class="hero-bg" data-bg="noche"></div>
+  <div class="wrap">
+    <div class="eyebrow" style="color:rgba(255,255,255,.6);position:relative;z-index:2">Para revendedores</div>
+    <h1>Precio de mayoreo</h1>
+    <p>Desde $4,000 en un solo pedido accedes a precio especial por pieza. Sin contratos, sin membresías y sin comprar cajas cerradas de un mismo modelo.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Cómo funciona</h2>
+      <p class="sec-sub">Tres niveles según el monto de tu pedido</p></div>
+    <div class="tier-grid">
+      <div class="tier">
+        <div class="t-name">Menudeo</div>
+        <div class="t-price">$0</div>
+        <div class="t-note">Sin monto mínimo</div>
+        <ul>
+          <li>Precio de lista publicado en el sitio</li>
+          <li>Envío gratis desde 3 piezas</li>
+          <li>Garantía de autenticidad</li>
+          <li>Asesoría por WhatsApp</li>
+        </ul>
+      </div>
+      <div class="tier is-featured">
+        <div class="t-name">Mayoreo</div>
+        <div class="t-price">$4,000</div>
+        <div class="t-note">Mínimo por pedido</div>
+        <ul>
+          <li>Precio especial por pieza</li>
+          <li>Puedes mezclar modelos libremente</li>
+          <li>Envío gratis siempre</li>
+          <li>Lista de disponibilidad actualizada</li>
+          <li>Prioridad en apartados</li>
+        </ul>
+        <a class="btn btn-block" style="margin-top:20px" href="#solicitar">Solicitar lista</a>
+      </div>
+      <div class="tier">
+        <div class="t-name">Volumen</div>
+        <div class="t-price">$15,000</div>
+        <div class="t-note">Pedidos grandes</div>
+        <ul>
+          <li>Mejor precio del catálogo</li>
+          <li>Apartado con anticipo</li>
+          <li>Surtido recurrente mensual</li>
+          <li>Atención directa sin intermediarios</li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:12px;margin-top:20px">
+      Los montos son de referencia para el maquetado. Se ajustan a la política real de la tienda antes de publicar.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CALCULADORA ============ -->
+<section class="sec-bone" id="calculadora">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Calcula tu pedido</h2>
+      <p class="sec-sub">Una idea rápida de cómo queda tu margen</p></div>
+    <div class="calc">
+      <div>
+        <label>¿Cuántas piezas piensas llevar?</label>
+        <input type="range" id="pzs" min="1" max="60" value="12" style="padding:0">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin:6px 0 22px">
+          <span>1 pieza</span><strong id="pzsLbl" style="color:var(--navy)">12 piezas</strong><span>60 piezas</span>
+        </div>
+        <label>Precio promedio por pieza</label>
+        <select id="prom">
+          <option value="900">Perfumes árabes · ~$900</option>
+          <option value="1250" selected>Mixto · ~$1,250</option>
+          <option value="2400">Diseñador · ~$2,400</option>
+        </select>
+        <div style="margin-top:22px">
+          <label>¿A cuánto piensas revender?</label>
+          <input type="number" id="venta" value="1800" min="0" step="50">
+        </div>
+      </div>
+      <div class="calc-out" id="out"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASOS ============ -->
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Pedir por mayoreo, paso a paso</h2></div>
+    <div class="cards-3">
+      <div class="info-card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.1A8 8 0 1 1 21 12z"/></svg></div>
+        <h3>1 · Nos escribes</h3>
+        <p>Por WhatsApp o Instagram nos dices qué modelos te interesan o qué presupuesto manejas. Te mandamos la lista con existencias del día.</p>
+      </div>
+      <div class="info-card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="6" width="20" height="12"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+        <h3>2 · Armamos y pagas</h3>
+        <p>Confirmamos tu pedido con el precio de mayoreo aplicado. Pagas por transferencia, depósito o efectivo y apartamos tu mercancía.</p>
+      </div>
+      <div class="info-card">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 7h11v9H2z"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></div>
+        <h3>3 · Lo enviamos</h3>
+        <p>Sale el mismo día con Skydrop, empacado para que no se maltrate, y te compartimos el número de guía para que lo rastrees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATÁLOGO ============ -->
+<section class="sec-bone" id="catalogo">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title">Los que más se revenden</h2>
+      <p class="sec-sub">Rotación comprobada semana tras semana</p></div>
+    <div class="rail-wrap">
+      <button class="rail-btn prev">‹</button>
+      <div class="rail" id="railMay"></div>
+      <button class="rail-btn next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLICITUD ============ -->
+<section id="solicitar">
+  <div class="wrap-narrow">
+    <div class="sec-head"><h2 class="sec-title">Solicita la lista de mayoreo</h2>
+      <p class="sec-sub">Te la enviamos el mismo día</p></div>
+    <form onsubmit="event.preventDefault();toast('Solicitud enviada (demostración)');this.reset()">
+      <div class="form-grid">
+        <label class="field"><span>Nombre</span><input required placeholder="Tu nombre"></label>
+        <label class="field"><span>WhatsApp</span><input required placeholder="10 dígitos"></label>
+        <label class="field"><span>Ciudad</span><input placeholder="Ciudad y estado"></label>
+        <label class="field"><span>Presupuesto aproximado</span>
+          <select><option>$4,000 – $8,000</option><option>$8,000 – $15,000</option><option>Más de $15,000</option><option>Aún no lo defino</option></select></label>
+        <label class="field full"><span>¿Qué tipo de perfume vendes?</span><textarea rows="3" placeholder="Árabes, diseñador, para hombre, para mujer…"></textarea></label>
+      </div>
+      <button class="btn btn-block" type="submit">Enviar solicitud</button>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+function calcular(){
+  const pz = +document.querySelector("#pzs").value;
+  const prom = +document.querySelector("#prom").value;
+  const venta = +document.querySelector("#venta").value || 0;
+  const bruto = pz * prom;
+  const desc = bruto >= 15000 ? .22 : (bruto >= 4000 ? .15 : 0);
+  const costo = Math.round(bruto * (1 - desc));
+  const ingreso = pz * venta;
+  const util = ingreso - costo;
+  document.querySelector("#pzsLbl").textContent = pz + (pz===1?" pieza":" piezas");
+  document.querySelector("#out").innerHTML = `
+    <div class="row"><span>Piezas</span><span>${pz}</span></div>
+    <div class="row"><span>Precio de lista</span><span>${MONEDA(bruto)}</span></div>
+    <div class="row"><span>Descuento por volumen</span><span>${desc? "−"+Math.round(desc*100)+"%" : "No aplica"}</span></div>
+    <div class="row"><span>Tu costo</span><span>${MONEDA(costo)}</span></div>
+    <div class="row"><span>Si revendes a ${MONEDA(venta)}</span><span>${MONEDA(ingreso)}</span></div>
+    <div class="row big"><span>Utilidad estimada</span><span>${MONEDA(Math.max(0,util))}</span></div>
+    <p style="font-size:11px;color:rgba(255,255,255,.55);margin:14px 0 0">
+      Cálculo ilustrativo. Los porcentajes reales se definen con la tienda.</p>`;
+}
+function pageInit(){
+  ["#pzs","#prom","#venta"].forEach(s=>document.querySelector(s).addEventListener("input", calcular));
+  calcular();
+  renderCards(PRODUCTOS.filter(p=>p.best || p.precio < 1300).slice(0,10), "#railMay");
+}
+</script>
+</body>
+</html>
